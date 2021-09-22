@@ -22,7 +22,7 @@ Here are some ideas to get you started:
 
 - 🔭 I’m currently working on [phpftp](https://github.com/kaikkitietokoneista/phpftp/)
 
-- 📫 How to reach me **info@kaikkitietokoneista.net**
+- 📫 How to reach me **roy@kaikkitietokoneista.net**
 
 
 <h3 align="left">Languages and Tools:</h3>
