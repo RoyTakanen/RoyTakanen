@@ -4,8 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaikkitietokoneista</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <h1>Kaikkitietokoneista</h1>
+    <div class="container mx-auto">
+        <center>
+            <h1 class="text-red-500 text-opacity-50 text-3xl p-16 subpixel-antialiased font-bold">Kaikkitietokoneista - projektit</h1>
+        </center>
+    </div>
+    <div class="container mx-auto">
+        <div class="grid grid-cols-3 gap-4" id="repos"></div>
+    </div>
+
+    <template id="repoCard">
+        <div id="card" class="bg-blue-600 bg-opacity-75 p-8 rounded-2xl text-white font-bold">
+            <h2 class="text-xl inline"></h2>
+            <div class="float-right inline">
+                <i class="far fa-star"></i> <span id="stars"></span>
+            </div>
+            <hr>
+            <p class="font-normal mt-8"></p>
+            <div class="mt-4">
+                <strong>Aktiivinen: </strong><span id="lastActive"></span>
+            </div>
+        </div>
+    </template>
+
+    <script>
+        fetch("https://api.github.com/users/kaikkitietokoneista/repos")
+            .then((response) => {
+                return response.json();
+            })
+            .then((repos) => {
+                repos.forEach(repo => {
+                    let template = document.querySelector("#repoCard");
+
+                    let repos = document.querySelector("#repos");
+
+                    let newCard = template.content.cloneNode(true);
+
+                    newCard.querySelector("h2").textContent = repo.name
+                    newCard.querySelector("p").textContent = repo.description
+                    newCard.querySelector("#stars").textContent = repo.stargazers_count
+                    newCard.querySelector("#lastActive").textContent = repo.pushed_at
+
+
+                    if (repo.archived) {
+                        let classes = newCard.querySelector("#card").classList
+                        classes.remove("bg-blue-600")
+                        classes.add("bg-yellow-100")
+
+                        classes.remove("text-white")
+                    }
+
+                    repos.appendChild(newCard)
+
+                    console.log(repo)
+                });
+            })
+    </script>
 </body>
 </html>
