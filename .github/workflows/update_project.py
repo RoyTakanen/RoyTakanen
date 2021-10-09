@@ -14,7 +14,7 @@ for project in projects:
     if time_formatted > biggest_time and project["name"] != "kaikkitietokoneista":
         biggest_time = time_formatted
         project_name = project["name"]
-        project_url = project["url"]
+        project_url = project["html_url"]
 
 new_content = re.sub(r'currently working on .*', 'currently working on [' + project_name + '](' + project_url + ')', file_content)
 
