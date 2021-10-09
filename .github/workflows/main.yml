@@ -1,0 +1,25 @@
+name: Update README with latest project
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Run a one-line script
+      run: python ./.github/workflows/update_project.py
+
+    - name: Update resources
+      uses: test-room-7/action-update-file@v1
+      with:
+          file-path: README.md
+          commit-msg: Update README.md with the latest project
+          github-token: ${{ secrets.GITHUB_TOKEN }}
