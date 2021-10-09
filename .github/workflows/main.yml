@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  update-project:
 
     runs-on: ubuntu-latest
 
