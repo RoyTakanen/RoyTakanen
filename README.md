@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=kaikkitietokoneista&label=Profile%20views&color=0e75b6&style=flat" alt="kaikkitietokoneista" /> </p>
 
-- 🔭 I’m currently working on [HimosCMS](https://github.com/kaikkitietokoneista/HimosCMS)
+- 🔭 I’m currently working on [Searx-api](https://github.com/kaikkitietokoneista/Searx-api)
 
 - 📫 How to reach me **roy@kaikkitietokoneista.net**
 
