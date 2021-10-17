@@ -14,7 +14,7 @@
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=kaikkitietokoneista&show_icons=true&locale=en&layout=compact" alt="kaikkitietokoneista" /></p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=kaikkitietokoneista&show_icons=true&locale=en" alt="kaikkitietokoneista" /></p>
+<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=RoyTakanen&show_icons=true&locale=en" alt="Roy Takanen" /></p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=kaikkitietokoneista&" alt="kaikkitietokoneista" /></p>
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=RoyTakanen&" alt="Roy Takanen" /></p>
 
