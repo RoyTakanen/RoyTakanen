@@ -4,11 +4,13 @@ import re
 f = open("README.md", "r")
 file_content = f.read()
 
-events = requests.get("https://api.github.com/users/kaikkitietokoneista/events").json()
+all_events = requests.get("https://api.github.com/users/kaikkitietokoneista/events").json()
 
-github_user = events[0]["actor"]["login"]
-project_name = events[0]["repo"]["name"].replace(github_user + "/", "", 1)
-project_url = "https://github.com/" + events[0]["repo"]["name"]
+push_events = [event for event in all_events if event['type'] == 'PushEvent']
+
+github_user = push_events[0]["actor"]["login"]
+project_name = push_events[0]["repo"]["name"].replace(github_user + "/", "", 1)
+project_url = "https://github.com/" + push_events[0]["repo"]["name"]
 
 new_content = re.sub(r'currently working on .*', 'currently working on [' + project_name + '](' + project_url + ')', file_content)
 
