@@ -6,7 +6,7 @@ file_content = f.read()
 
 all_events = requests.get("https://api.github.com/users/kaikkitietokoneista/events").json()
 
-push_events = [event for event in all_events if event['type'] == 'PushEvent']
+push_events = list(filter(lambda event: event['type'] == "PushEvent", all_events))
 
 github_user = push_events[0]["actor"]["login"]
 project_name = push_events[0]["repo"]["name"].replace(github_user + "/", "", 1)
