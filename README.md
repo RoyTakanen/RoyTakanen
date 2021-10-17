@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=kaikkitietokoneista&label=Profile%20views&color=0e75b6&style=flat" alt="kaikkitietokoneista" /> </p>
 
-- 🔭 I’m currently working on [RoyTakanen](https://github.com/RoyTakanen/RoyTakanen)
+- 🔭 I’m currently working on [joulukalenteri](https://github.com/RoyTakanen/joulukalenteri)
 
 - 📫 How to reach me **roy@kaikkitietokoneista.net**
 
