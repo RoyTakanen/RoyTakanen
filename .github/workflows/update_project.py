@@ -4,7 +4,7 @@ import re
 f = open("README.md", "r")
 file_content = f.read()
 
-all_events = requests.get("https://api.github.com/users/kaikkitietokoneista/events").json()
+all_events = requests.get("https://api.github.com/users/RoyTakanen/events").json()
 
 push_events = list(filter(lambda event: event['type'] == "PushEvent", all_events))
 
