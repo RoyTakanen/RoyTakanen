@@ -14,10 +14,10 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - name: Run a one-line script
+    - name: Check the latest project from Github events
       run: python ./.github/workflows/update_project.py
 
-    - name: Update resources
+    - name: Commit the new README
       uses: test-room-7/action-update-file@v1
       with:
           file-path: README.md
