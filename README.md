@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=kaikkitietokoneista&label=Profile%20views&color=0e75b6&style=flat" alt="kaikkitietokoneista" /> </p>
 
-- 🔭 I’m currently working on [Polttaja/EmailTester](https://github.com/Polttaja/EmailTester)
+- 🔭 I’m currently working on [Polttaja/Polttaja-web](https://github.com/Polttaja/Polttaja-web)
 
 - 📫 How to reach me **roy@kaikkitietokoneista.net**
 
