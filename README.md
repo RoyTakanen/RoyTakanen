@@ -5,7 +5,7 @@
 
 - 🔭 I’m currently working on [breach2019](https://github.com/RoyTakanen/breach2019)
 
-- 📫 How to reach me **roy@kaikkitietokoneista.net**
+- 📫 How to reach me **roy@imap.fi**
 
 <!-- - If you are interested to see what services I host myself check them out [here](/servers/README.md). -->
 
