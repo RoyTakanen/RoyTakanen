@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=kaikkitietokoneista&label=Profile%20views&color=0e75b6&style=flat" alt="kaikkitietokoneista" /> </p>
 
-- 🔭 I’m currently working on [torimies-rs](https://github.com/RoyTakanen/torimies-rs)
+- 🔭 I’m currently working on [mailcow-dockerized](https://github.com/RoyTakanen/mailcow-dockerized)
 
 - 📫 How to reach me **roy@imap.fi**
 
