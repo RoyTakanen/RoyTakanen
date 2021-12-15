@@ -1,5 +1,9 @@
 <h1 align="center">Hi 👋, I'm Roy</h1>
-<h3 align="center">I like programming</h3>
+<h3>My interests</h3>
+
+Web development and server management have always been important for me. I also follow actively activities on the cyber security field and try to understand them. The fascinating idea that code will be deployed automatically after it is finished has pushed me to learn more about Github Actions. I currentely use Docker to self-host email, password manager and file storage but I am looking forward to examine Kubernetes and Docker swarm.
+
+<h3>Info</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=kaikkitietokoneista&label=Profile%20views&color=0e75b6&style=flat" alt="kaikkitietokoneista" /> </p>
 
