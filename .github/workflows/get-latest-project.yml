@@ -2,7 +2,7 @@ name: Update README with latest project
 
 on:
   schedule:
-    - cron: "30 * * * *"
+    - cron: "5 * * * *"
 
   workflow_dispatch:
 
