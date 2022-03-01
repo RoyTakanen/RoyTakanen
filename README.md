@@ -7,7 +7,7 @@ Web development and server management have always been important for me. I also 
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=kaikkitietokoneista&label=Profile%20views&color=0e75b6&style=flat" alt="kaikkitietokoneista" /> </p>
 
-- 🔭 I’m currently working on [roytakanen.github.io](https://github.com/RoyTakanen/roytakanen.github.io)
+- 🔭 I’m currently working on [pastebin-fi/PowerPaste](https://github.com/pastebin-fi/PowerPaste)
 
 - 📫 How to reach me **roy@imap.fi**
 
