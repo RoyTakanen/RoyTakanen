@@ -1,0 +1,98 @@
+version: '3.7'
+
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Helsinki
+    volumes:
+      - ./radarr-config:/config
+      - varastolaatikko_library:/varastolaatikko_library
+      - seedbox_seedhost:/seedbox_seedhost
+    restart: unless-stopped
+    privileged: true
+    ports:
+      - '7878:7878'
+
+  sonarr:
+    image: lscr.io/linuxserver/sonarr
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - ./sonarr-config:/config
+      - varastolaatikko_library:/varastolaatikko_library
+      - seedbox_seedhost:/seedbox_seedhost
+    restart: unless-stopped
+    ports:
+      - '8989:8989'
+
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin
+    image: jetbrainsinfra/nginx-file-listing:0.2 
+    container_name: httpd 
+    environment:
+    - PUID=1000
+    - PGID=1000
+     - TZ=Europe/Helsinki
+    volumes:
+      - /data/jellyfin-config:/config # fricking transcodes folder filling up my ssd
+      - /data/movies:/data/movies
+      - /data/tvseries:/data/tvseries
+      - /data/movies:/mnt/data
+    restart: unless-stopped
+    ports:
+      - '8096:8096'
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.libmovie.rule=Host(`domain`)"
+      - "traefik.http.routers.libmovie.entrypoints=web"
+    networks:
+      - jouluvalot
+
+  bazarr:
+    image: lscr.io/linuxserver/bazarr
+    container_name: bazarr
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Helsinki
+    volumes:
+      - ./bazarr-config:/config
+      - varastolaatikko_library:/varastolaatikko_library
+    restart: unless-stopped
+    ports:
+      - '6767:6767'
+
+  unpackerr:
+    image: golift/unpackerr
+    volumes:
+      - seedbox_seedhost:/downloads
+      - ./unpackerr-config:/etc/unpackerr
+
+
+networks:
+  jouluvalot:
+    external: true
+
+volumes:
+  seedbox_seedhost:
+    name: seedbox_seedhost
+    driver: vieux/sshfs:latest
+    driver_opts:
+      sshcmd: "user@hostname:path"
+      password: "${SEEDBOX_SEEDHOST_PASS}"
+      allow_other: ""
+
+  varastolaatikko_library:
+    name: varastolaatikko_library
+    driver: vieux/sshfs:latest
+    driver_opts:
+      sshcmd: "user@host:path"
+      password: "${VARASTOLAATIKKO_LIBRARY_PASS}"
+      allow_other: ""
