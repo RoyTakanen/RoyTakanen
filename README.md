@@ -7,7 +7,7 @@ Web development and server management have always been important for me. I also 
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=kaikkitietokoneista&label=Profile%20views&color=0e75b6&style=flat" alt="kaikkitietokoneista" /> </p>
 
-- 🔭 I’m currently working on [proxigram-docker](https://github.com/RoyTakanen/proxigram-docker)
+- 🔭 I’m currently working on [dotfiles](https://github.com/RoyTakanen/dotfiles)
 
 - 📫 How to reach me **roy@imap.fi**
 
